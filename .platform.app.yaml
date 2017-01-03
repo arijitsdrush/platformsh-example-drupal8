@@ -72,7 +72,11 @@ web:
 
             rules:
                 # Provide a longer TTL (2 weeks) for aggregated CSS and JS files.
-                '^/sites/default/files/(css|js)':
+                '^/sites/default/files/(css|js)/':
+                    expires: 2w
+
+                # And the same for image styles.
+                '^/sites/default/files/styles/':
                     expires: 2w
 
 # The size of the persistent disk of the application (in MB).
